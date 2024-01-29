@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Next.js & MongoDB Learning Journey
 
-## Getting Started
+## 🚀 Quick Start
 
-First, run the development server:
+Embark on setting up this project on your local environment by following these simple steps.
+
+### Essentials
+
+Before diving in, ensure you have these tools installed on your system:
+
+- Git
+- Node.js
+- npm (Node Package Manager)
+
+### Cloning the Repository
+
+Start by cloning the repository and navigating to the project directory:
+
+```bash
+git clone https://github.com/adrianhajdin/project_next_13_ai_prompt_sharing.git
+cd project_next_13_ai_prompt_sharing
+```
+
+### Installation Process
+
+Proceed with installing all necessary dependencies:
+
+```bash
+npm install
+```
+
+### Environment Configuration
+
+Generate a `.env` file at the project's root and populate it as follows:
+
+```
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+NEXTAUTH_SECRET=
+GOOGLE_ID=
+GOOGLE_CLIENT_SECRET=
+MONGODB_URI=
+```
+
+Fill in the blanks with your credentials obtained from Google Cloud Console, Cryptpool (for NEXTAUTH_SECRET), and MongoDB.
+
+### Launching the Project
+
+To start the project, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Access it at http://localhost:3000 in your web browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🌐 Useful Snippets
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Here are some key files to check out:
 
-## Learn More
+- `globals.css`
+- `jsconfig.json`
+- `route.js`
+- `tailwind.config.js`
+- `user.js`
 
-To learn more about Next.js, take a look at the following resources:
+## 🔗 Resources & Assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project directly from www.jsmastery.pro/ultimate-next-course
+https://github.com/adrianhajdin/project_next_14_ai_prompt_sharing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📚 Learning Journey
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is a learning endeavor to deepen my understanding of Next.js and MongoDB.
