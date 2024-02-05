@@ -6,19 +6,39 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
-  const isUserLoggedIn = true;
+  const { data: session } = useSession();
 
-  const [providers, setProviders] = useState([null]);
+  /*  Note that you will have to use a specific REST API https://next-auth.js.org/v3/getting-started/rest-api#:~:text=GET%20%2Fapi%2Fauth%2Fcallback,OAuth%20services%20during%20sign%20in. 
+      For example, for GoogleOAuth, you will have to use the following REST API
+      in https://console.cloud.google.com/apis/credentials/oauthclient/:
+      under 'Authorized redirect URIs', add the following:
+      http://localhost:3000/api/auth/callback/google
+
+      note that if your GoogleOAuth 'OAuth consent screen' is not verified, 
+      you will only be able to sign in with the email of the 'Test users' 
+      you have added in the 'OAuth consent screen' & you will need to adjust your
+
+      next.config.mjs file to the following:
+      /** @type {import('next').NextConfig} */
+  // const nextConfig = {
+  //   images: {
+  //     domains: ["lh3.googleusercontent.com"],
+  //   },
+  // };
+
+  // export default nextConfig;
+
+  const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   useEffect(() => {
-    const setProviders = async () => {
+    const setUpProviders = async () => {
       const response = await getProviders();
 
       setProviders(response);
     };
 
-    setProviders();
+    setUpProviders();
   }, []);
 
   return (
@@ -36,7 +56,7 @@ const Nav = () => {
 
       {/* Desktop Navigation */}
       <div className="sm:flex hidden">
-        {isUserLoggedIn ? (
+        {session?.user ? (
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="black_btn">
               Create Post
@@ -48,7 +68,7 @@ const Nav = () => {
 
             <Link href="/profile">
               <Image
-                src="/assets/images/logo.svg"
+                src={session?.user.image}
                 width={37}
                 height={37}
                 className="rounded-full"
@@ -75,10 +95,10 @@ const Nav = () => {
 
       {/* Mobile Navigation */}
       <div className="sm:hidden flex relative">
-        {isUserLoggedIn ? (
+        {session?.user ? (
           <div className="flex">
             <Image
-              src="/assets/images/logo.svg"
+              src={session?.user.image}
               width={37}
               height={37}
               className="rounded-full"
