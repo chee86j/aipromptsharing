@@ -31,7 +31,7 @@ export default User;
 /*  The "models" object is provided by the Mongoose library and 
     it is used to store all the registered models.
 
-    If a model named "User" already exists, it assigns that
+    If a model named "User" already exists, it assi gns that
     existing model to the "User" variable. If not, it creates a new one
     with the new model being assigned to the "User" variable.
     

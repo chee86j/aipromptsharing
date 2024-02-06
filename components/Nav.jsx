@@ -1,12 +1,12 @@
-"use client";
+"use client"; //  client-side rendering because we have hooks in this component
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"; //  Next.js Image component for optimized images/
 import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
-  const { data: session } = useSession();
+  const { data: session } = useSession(); // to access User's authentication status and info
 
   /*  Note that you will have to use a specific REST API https://next-auth.js.org/v3/getting-started/rest-api#:~:text=GET%20%2Fapi%2Fauth%2Fcallback,OAuth%20services%20during%20sign%20in. 
       For example, for GoogleOAuth, you will have to use the following REST API
@@ -31,6 +31,7 @@ const Nav = () => {
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
+  // Fetch providers when component mounts
   useEffect(() => {
     const setUpProviders = async () => {
       const response = await getProviders();
