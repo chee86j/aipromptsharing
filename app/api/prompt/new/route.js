@@ -1,4 +1,5 @@
 //  Create your own api endpoint
+//  This route will be used to create a new prompt entry in the database
 import { connectToDB } from "@utils/database";
 import Prompt from "@models/prompt"; // next create a prompt model in the models folder
 
@@ -7,6 +8,7 @@ export const POST = async (req) => {
 
   try {
     await connectToDB();
+    å;
     const newPrompt = new Prompt({
       // create a new instance of the Prompt model
       // and set the fields to the values passed in the request body
