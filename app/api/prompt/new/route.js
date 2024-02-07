@@ -8,7 +8,6 @@ export const POST = async (req) => {
 
   try {
     await connectToDB();
-    å;
     const newPrompt = new Prompt({
       // create a new instance of the Prompt model
       // and set the fields to the values passed in the request body
@@ -26,7 +25,13 @@ export const POST = async (req) => {
     // json representation of the new prompt and a status code of 201
     return new Response(JSON.stringify(newPrompt), { status: 201 });
   } catch (error) {
-    return new Response("Failed to create a new prompt", { status: 500 });
-    // a 500 status code is a generic error message
+    return new Response(
+      JSON.stringify({
+        message: "Failed to create a new prompt",
+        error: error.message,
+      }),
+      { status: 500 }
+    );
+    // a 500 status code with a message indicating that the prompt creation failed
   }
 };
