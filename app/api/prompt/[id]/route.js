@@ -1,4 +1,17 @@
 // API Route for GET, PATCH, & DELETE requests for specific prompt
+/*  In Next.js, PATCH is commonly used in API routes (server-side) 
+    to handle requests for partially updating a resource, such as 
+    a specific entry in a database.
+
+    In React, which runs on the client-side, you don't directly 
+    handle HTTP methods like PATCH. Instead, you use them to make 
+    requests to an API.
+    
+    When a React component needs to update a resource on the server 
+    (like a database entry), it might send a PATCH request to an API 
+    endpoint. This is typically done using functions from libraries 
+    like fetch or axios.
+*/
 
 // import Prompt model and connectToDB function
 import Prompt from "@models/prompt";
@@ -10,6 +23,7 @@ export const GET = async (request, { params }) => {
     await connectToDB();
 
     // Find prompt by ID and populate 'creator' field with user details
+    // populate is used to replace the specified ID with the actual user details
     const prompt = await Prompt.findById(params.id).populate("creator");
     if (!prompt) return new Response("Prompt Not Found", { status: 404 });
 
