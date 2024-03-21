@@ -48,9 +48,10 @@ const Nav = () => {
         <Image
           src="/assets/images/logo.svg"
           alt="Promptorium Logo"
-          width={30}
-          height={30}
+          width={60}
+          height={60}
           className="object-contain"
+          priority="true"
         />
         <p className="logo_text">Promptorium</p>
       </Link>

@@ -1,8 +1,7 @@
-// component to fetch details of a specific prompt & update it.
-"use client";
-
+// components/UpdatePrompt.jsx
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
+import { useSearchParams } from "next/dist/client/use-router";
 
 // Import Form component used for editing prompts
 import Form from "@components/Form";
