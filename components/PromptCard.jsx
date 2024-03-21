@@ -23,7 +23,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   };
 
   return (
-    <div className="prompt_card">
+    <div className="prompt_card hover:scale-110">
       {/* Section displaying the post creator's information */}
       <div className="flex justify-between items-start gap-5">
         {/* User image and name */}

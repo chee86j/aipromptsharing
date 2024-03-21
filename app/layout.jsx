@@ -6,7 +6,7 @@ import Provider from "@components/Provider";
 //  Metadata for the app to be used for
 //  SEO, social media sharing, etc.
 export const metadata = {
-  title: "Promptopia",
+  title: "Promptorium",
   description: "Discover & Share AI Prompts",
 };
 

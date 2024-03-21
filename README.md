@@ -1,6 +1,6 @@
 # AI Prompt Project: Next.js, NextAuth.js & MongoDB Learning Journey
 
-Welcome to Promptopia, where creativity seamlessly blends with technology. This web application, a craft of Next.js and MongoDB, invites AI enthusiasts, writers, learners, and thinkers into a world of endless possibilities. In Promptopia, you can unleash your creativity, discover new ideas, and share AI-generated prompts that not only inspire but also enhance learning and help in achieving various creative and intellectual endeavors.
+Welcome to Promptorium, where creativity seamlessly blends with technology. This web application, a craft of Next.js and MongoDB, invites AI enthusiasts, writers, learners, and thinkers into a world of endless possibilities. In Promptorium, you can unleash your creativity, discover new ideas, and share AI-generated prompts that not only inspire but also enhance learning and help in achieving various creative and intellectual endeavors.
 
 AI writing prompts serve as a bridge between you and the AI tool, guiding it to produce precisely what you're looking for. These prompts are crucial in optimizing the AI platform, enabling it to process data quickly and efficiently. This, in turn, helps in extracting valuable insights and generating content that's not only engaging but also thought-provoking. Think of it as instructing a smart assistant to understand and execute your creative commands.
 
